@@ -1,7 +1,6 @@
 #include<iostream>
 #include <fstream>
 #include<math.h>
-//#include<graphics.h>
 
 using namespace std;
 
