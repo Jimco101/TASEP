@@ -16,4 +16,7 @@ int main()
 	{		
 		cout<<Lattice[i]<<" ";
    	} 
+   	ofstream myfile;
+	myfile.open ("rng.txt");
+	
 }
