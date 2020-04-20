@@ -6,9 +6,9 @@ using namespace std;
 
 int main()
 {
-	int N=10, timer=1000, j=0, k=0;
-	float q=0.5, p=1.0;
-	int Lattice[N];
+	int N=10, timer=900, j=0, k=0;
+	float q=0.5, p=0.5;
+	int Lattice[N], NewLat[N];
 	float rng[10000];
 	for (int i = 0; i < N; i++ ) 
 	{		
@@ -41,12 +41,21 @@ int main()
 		{
 			if(q > rng[j] && Lattice[i]==1 && Lattice[i+1] == 0)
 			{
-				Lattice[i+1]=1;
-				Lattice[i]=0;
+				NewLat[i+1]=1;
+				NewLat[i]=0;
+			}
+			else
+			{
+				NewLat[i]=Lattice[i];
 			}
 
 			j++;
 		}
+		
+		for (int i = 0; i < N; i++ ) 
+		{		
+			Lattice[i]=NewLat[i];
+	   	}
 		
 		if(q > rng[j] && Lattice[N] == 1)
 		{
